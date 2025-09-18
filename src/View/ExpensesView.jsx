@@ -18,7 +18,6 @@ export default function ExpensesView() {
       }}
     >
       <TotalExpensePerCategory/>
-      <ExpensesForm />
       <ExpensesList />
     </div>
   );

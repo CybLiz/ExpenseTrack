@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import "../Style/TotalExpensePerCategory.css";
 
 export default function totalPerCategory() {
+
+    
   const expenses = useSelector((state) => state.expenses);
   const categories = ["Alimentation", "Transport", "Loyer", "Loisirs", "Autre"];
   const totals = categories.map((cat) => {
@@ -11,6 +13,8 @@ export default function totalPerCategory() {
       .reduce((sum, exp) => sum + exp.amount, 0);
     return { category: cat, total };
   });
+
+
   return (
     <div className="total-expense-per-category">
       {totals.map((cat) => (
