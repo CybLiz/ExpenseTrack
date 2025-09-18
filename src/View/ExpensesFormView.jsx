@@ -32,52 +32,64 @@ const ExpenseForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="expense-form">
-      <label htmlFor="label">Libellé</label>
-      <input
-        id="label"
-        type="text"
-        placeholder="Ex: Courses"
-        value={label}
-        onChange={(e) => setLabel(e.target.value)}
-        required
-      />
+    <div
+      style={{
+        display: "flex",
+        flexDirection:"column",
+        alignItems: "center",
+        height: "100vh",
+        padding: "20px",
+      }}
+    >
 
-      <label htmlFor="amount">Montant</label>
-      <input
-        id="amount"
-        type="number"
-        step="0.01"
-        placeholder="Ex: 12.50"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        required
-      />
+        <h1>Ajouter une dépense</h1>
+      <form onSubmit={handleSubmit} className="expense-form">
+        <label htmlFor="label">Libellé</label>
+        <input
+          id="label"
+          type="text"
+          placeholder="Ex: Courses"
+          value={label}
+          onChange={(e) => setLabel(e.target.value)}
+          required
+        />
 
-      <label htmlFor="category">Catégorie</label>
-      <select
-        id="category"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-      >
-        <option value="Alimentation">Alimentation</option>
-        <option value="Transport">Transport</option>
-        <option value="Loyer">Loyer</option>
-        <option value="Loisirs">Loisirs</option>
-        <option value="Autre">Autre</option>
-      </select>
+        <label htmlFor="amount">Montant</label>
+        <input
+          id="amount"
+          type="number"
+          step="0.01"
+          placeholder="Ex: 12.50"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          required
+        />
 
-      <label htmlFor="date">Date</label>
-      <input
-        id="date"
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        required
-      />
+        <label htmlFor="category">Catégorie</label>
+        <select
+          id="category"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="Alimentation">Alimentation</option>
+          <option value="Transport">Transport</option>
+          <option value="Loyer">Loyer</option>
+          <option value="Loisirs">Loisirs</option>
+          <option value="Autre">Autre</option>
+        </select>
 
-      <button type="submit">Ajouter</button>
-    </form>
+        <label htmlFor="date">Date</label>
+        <input
+          id="date"
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
+
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
   );
 };
 
