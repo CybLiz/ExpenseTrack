@@ -1,0 +1,61 @@
+.expense-list {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.expense-list-content {
+  width: 95%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.total {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.deleteBtn {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
